@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cú pháp tương tác css với html</title>
+</head>
+<body>
+    <header>
+        <h1>Cú pháp tương tác css với html</h1>
+    </header>
+    <section id="zone1">
+        <pre>
+            1. Css tương tác với tên thẻ HTML
+            2. Css tương tác với thuộc tính id của thẻ HTML
+            3. Css tương tác với tên class của thẻ html
+            4. Css tương tác với giá trị của  thuộc tính
+        </pre>
+    </section>
+    <style>
+        /* zone2 */
+        /* 1. Css tương tác với tên thẻ HTML 
+            tag{
+                quy tắc
+            }
+        */
+        h2{
+            color:brown;
+            border-bottom: 2px solid blue;
+        }
+    </style>
+    <section id="zone2">
+        <h2>1. Css tương tác với tên thẻ HTML</h2>
+    </section>
+    <style>
+        /* 2. Css tương tác với thuộc tính id của thẻ HTML */
+        /*
+            #id{
+                quy tắc
+            }
+        */
+        #zone3{
+            border: 2px dotted red;
+            margin: 1rem;
+            padding: 2rem;
+        }
+    </style>
+    <section id="zone3">
+        <h3>2. Css tương tác với thuộc tính id của thẻ HTML</h3>
+    </section>
+    <style>
+        /* 3. Css tương tác với tên class của thẻ html */
+        .container{
+            margin:.5rem 10%;
+            background-color: aqua;
+        }
+    </style>
+    <section id="zone4">
+        <div class="container">
+            <h3>3. Css tương tác với tên class của thẻ html </h3>
+        </div>
+    </section>
+    <style>
+        /* 4. Css tương tác với giá trị của  thuộc tính */
+        p[class="content"]{
+            color:yellow;
+        }
+        input[type="text"]{
+            width: 100%;
+            border: 1px solid blue;
+            margin: .25rem 0;
+            padding: .5rem;
+        }
+    </style>
+    <section id="zone">
+        <div class="container">
+            <h3>4. Css tương tác với giá trị của  thuộc tính</h3>
+            <div class="item-cart">
+                <p class="content">content</p>
+                <p class="content-1">content</p>
+                <p class="content">content</p>
+            </div>
+            <div class="form-group">
+                <input data-id="1" type="text" name="txt1" id="txt1">
+                <input data-id="2" type="text" name="txt2" id="txt2">
+                <input data-id="3" type="email" name="txt3" id="txt3">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

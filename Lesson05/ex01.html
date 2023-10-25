@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Các thuộc tính thường dùng trong css3 </title>
+<style>
+    #box{
+        border: 2px solid #000;
+        width:300px;
+        height: 200px;
+        padding:10px;
+    }
+    #box .item{
+        border:1px solid red;
+        border-radius:10px;
+        background-color: green;
+        color: #fff;
+        text-align: center;
+        -webkit-box-shadow: 0px 0px 104px 28px rgba(87,7,87,1);
+        -moz-box-shadow: 0px 0px 104px 28px rgba(87,7,87,1);
+        box-shadow: 0px 0px 104px 28px rgba(87,7,87,1);
+    }
+    #box .item:hover{
+        -webkit-box-shadow: 0px 0px 22px 28px rgba(87,13,8,0.83);
+-moz-box-shadow: 0px 0px 22px 28px rgba(87,13,8,0.83);
+box-shadow: 0px 0px 22px 28px rgba(87,13,8,0.83);
+    }
+</style>
+</head>
+<body>
+    <h1>Các thuộc tính trong css3 </h1>
+    <hr>
+    <h2>Box shadow</h2>
+    <section id="box">
+        <div class="item">
+            <h3>Box shadow</h3>
+        </div>
+    </section>
+</body>
+</html>

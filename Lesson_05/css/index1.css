@@ -1,0 +1,59 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+@font-face {
+  font-family: "Gotham Medium";
+  src: url('../fonts/Gotham Medium.otf');
+}
+header{
+	margin: .5rem 10%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #ccc;
+}
+nav ul{
+	list-style: none;
+	display: flex;
+}
+nav ul li{
+	position: relative;
+}
+nav ul li a{
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding-left: 3rem;
+	font-family: "Gotham Medium";
+	font-size: .9rem;
+	color:#424242;
+
+}
+nav ul li.active:before, nav ul li:hover:before {
+	border-color: #bd945f;
+	display: block;
+	background: #bd945f;
+}
+nav ul li:before{
+	position: absolute;
+    content: '';
+    top: 100%;
+    left: 3rem;
+    width: 60px;
+    height: 1px;
+    border: 2px solid #fff;
+    /*animation: menuHover .2s ease-in 1;*/
+}
+/*@keyframes menuHover {
+    from {
+        width: 30px;
+        opacity: 0;
+    }
+
+    to {
+        width: 60px;
+        opacity: 1;
+    }
+}
+*/

@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: #ccc;
+    margin: 1rem;
+    width: 200px;
+    border: 2px solid #000;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li:first-child{
+    background-color: red;
+    padding: .75rem;
+    /* opacity: .75; */
+    color: yellow;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+}
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    padding: .5rem;
+    border-bottom: 1px solid #999;
+}
+nav a:hover {
+    background-color: #ddd;
+    color: red;
+}
+nav ul li:last-child a{
+    border: 0px;
+}
