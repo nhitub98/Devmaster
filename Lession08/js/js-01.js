@@ -1,0 +1,1 @@
+document.write("<h2> Sử dụng file js </h2>");
