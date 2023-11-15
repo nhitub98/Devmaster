@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Element - Cú pháp tương tác</title>
+</head>
+<body>
+    <section id="zone1">
+        <h1>DOM Element - Cú pháp tương tác</h1>
+        <pre>
+            - Thông qua tên thẻ html: getElementsByTagName
+            - Thông qua thuộc tính id: getElementById
+            - Thông qua thuộc tính class: getElementsByClassName
+            - Thông qua css Selector: querySelectAll
+        </pre>
+    </section>
+    <section id="zone2">
+        <h2>- Thông qua tên thẻ html: getElementsByTagName</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo cumque reiciendis eum eaque quis corporis dolore modi reprehenderit temporibus minima porro, accusamus est inventore laborum esse, rem impedit quisquam tenetur.</p>
+
+        <script>
+            // - Thông qua tên thẻ html: getElementsByTagName
+            // tương tác với thẻ h2
+            let element=document.getElementsByTagName("h2");
+            element[0].style.color='Blue';
+            element = document.getElementsByTagName("p");
+            element[0].style.backgroundColor="green";
+            element[0].innerText +="Devmaster Academy";
+        </script>
+    </section>
+
+    <section id="zone3">
+        <h2>Thông qua thuộc tính id: getElementById</h2>
+        
+
+        <script>
+            // tương tác thông qua thuộc tính id
+            idElement = document.getElementById("zone2");
+            console.log(idElement);
+            idElement.style.backgroundColor = "cyan";
+        </script>
+    </section>
+
+    <section id="zone4">
+        <h2>Thông qua thuộc tính class: getElementsByClassName</h2>
+        <p class="txt">
+            Devmaster Academy
+        </p>
+        <p class="txt-1">
+            Devmaster Academy
+        </p>
+        <p class="txt">
+            Devmaster Academy
+        </p>
+        <script>
+            // Tương tác thông qua thuộc tính class
+            elem = document.getElementsByClassName("txt");
+            console.log(elem);
+            elem[0].style.color = "#f0f00f";
+            elem[1].style.color = "#Abcdef";
+            
+            // elem.forEach((x) => {
+            //     x.style.backgroundColor = "purple";
+            // });
+            for (let i = 0; i < elem.length; i++) {
+                const x = elem[i];
+                x.style.backgroundColor = "purple";
+                x.style.padding="1rem";
+            }
+        </script>
+    </section>
+
+    <section id="zone5">
+        <h2>Thông qua css Selector: querySelectAll</h2>
+
+        <script>
+            // Thông qua css Selector: querySelectAll
+            elem = document.querySelectorAll("section h2");
+
+            console.log(elem);
+            for (let i = 0; i < elem.length; i++) {
+                const x = elem[i];
+                x.style.backgroundColor = "red";
+                x.style.padding="1rem";
+
+                x.innerHTML += " <span style='color:yellow'> Devmaster </span>";
+            }
+        </script>
+    </section>
+</body>
+</html>

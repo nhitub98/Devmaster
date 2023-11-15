@@ -3,10 +3,30 @@
     padding: 0;
 }
 nav{
-    /* background-color: #ccc; */
     margin: 1rem;
     width: 200px;
     border: 2px solid #000;
+}
+nav .danh-muc{
+    border-bottom: 2px solid #000;
+}
+nav .danh-muc span{
+    width: 20px;
+    height: 3px;
+    display: block;
+    background-color: red;
+}
+.danh-muc {
+    display: flex;
+    padding: .5rem;
+}
+.danh-muc h3{
+    padding-left: .5rem;
+}
+.danh-muc >div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 nav ul{
     list-style: none;

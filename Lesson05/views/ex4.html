@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        div{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div:nth-child(2n){
+            background-color: red;
+            animation-name: example1;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        div:nth-child(2n+1){
+            background-color: yellow;
+            border-radius: 50%;
+            animation-name: example2;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        #zone1{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        @keyframes example1 {
+            0%   {background-color: red;}
+            25%  {background-color: yellow;}
+            50%  {background-color: blue;}
+            100% {background-color: green;}
+        }
+        @keyframes example2 {
+            0%   {background-color: purple;}
+            25%  {background-color: orange;}
+            50%  {background-color: olive;}
+            100% {background-color: black;}
+        }
+        @keyframes example {
+            0%   {background-color: white;}
+            100% {background-color: #ccc;}
+        }
+        body{
+            animation-name: example;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Animation in css3</h1>
+    <section id="zone1">
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+        <div>1</div>
+        <div>0</div>
+    </section>
+</body>
+</html>

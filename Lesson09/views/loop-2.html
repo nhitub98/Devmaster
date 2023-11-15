@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        form{
+            margin: 1rem 10%;
+            background-color: #ccc;
+            padding: 1rem;
+        }
+        label{
+            display: inline-block;
+            width: 6rem;
+        }
+        input[type="number"],
+        input[type="text"]{
+            width: calc(100% - 7rem);
+            border: 1px solid green;
+        }
+        input[type="number"]:focus,
+        input[type="button"]:focus
+        {
+            outline: none;
+            border-color: red;
+        }
+        input[type="button"]{
+            border: 1px solid green;
+            padding: .25rem 1rem;
+            cursor: pointer;
+        }
+        form > div{
+            margin: .5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <section id="zone1">
+        <h1>Tính toán với mảng</h1>
+        <pre>
+            - Nhập vào một số (num) là số phần tử của mảng 
+            - Sinh giá trị ngẫu nhiên là số nguyên từ 10-99
+                với (num) số và gán cho mảng 
+            - duyệt trong mảng, in ra các phần từ, tính tổng
+        </pre>
+        <hr/>
+        <form name="frm" action="" method="post">
+            <div>
+                <label for="num">Nhập một số</label>
+                <input type="number" name="num" id="num">
+            </div>
+            <div>
+                <label for=""></label>
+                <input type="button" name="btnTinh" id="btnTinh" value="Tính" 
+                    onclick="tinhToan();">
+            </div>
+            <div>
+                <label for="ketQua">Kết quả</label>
+                <input type="text" name="ketQua" id="ketQua" disabled>
+            </div>
+        </form>
+    </section>
+    <script>
+        const tinhToan = ()=>{ // 15
+            // lấy giá trị trên form
+            let num = parseInt(frm.num.value);
+            // Thực hiện tính toán.
+            let array = [];
+            // sinh ra num số nguyên có 2 chữ số
+            for (let i = 0; i < num; i++) {
+                // sinh một số ngẫu nhiên
+                let number = Math.floor(Math.random()*89) + 10 ;
+                array[i] = number;             
+            }
+            
+            str = "";
+            tong =0;
+            for (let i = 0; i < num; i++) {
+                if(i==num-1){
+                    str += array[i] + "=";
+                }else{
+                    str += array[i] + "+";
+                }
+                tong +=array[i];
+            }
+            // in kết quả
+            frm.ketQua.value = str + tong;
+        }
+    </script>
+</body>
+</html>

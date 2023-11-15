@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <section id="registration" class="container">
+        <h1>Registration Form</h1>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="userId">User Id</label>
+                <div>
+                    <input type="text" name="userId" id="userId"
+                        onkeyup="fn_Required(userId,errUserId,' không rỗng');fn_RangeLength(userId, errUserId,5,12,' độ dài từ 5-12')">
+                    <span id="errUserId" class="error">(*)</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div>
+                    <input type="password" name="password" id="password"
+                        onchange="fn_Password()">
+                    <span id="errPassword" class="error">(*)</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <div>
+                    <input type="text" name="name" id="name" 
+                            onchange="fn_Name()">
+                    <span id="errName" class="error">(*)</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <div>
+                    <input type="text" name="address" id="address">
+                    <span id="errAddress" class="error">(*)</span>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="country">Country</label>
+                <div>
+                    <select name="country" id="country" onchange="fn_Country()">
+                        <option value="">(Please select a country)</option>
+                        <option value="VI">Việt nam</option>
+                        <option value="EN">English</option>
+                    </select>
+                    <span id="errCountry" class="error">(*)</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="zipCode">Zip Code</label>
+                <div>
+                    <input type="number" name="zipCode" id="zipCode"
+                        onchange="fn_ZipCode()">
+                    
+                    <span id="errZipCode" class="error">(*)</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Gender</label>
+                <div>
+                    <input type="radio" name="gender" id="male" onchange="fn_Gender()">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="feMale" onchange="fn_Gender()">
+                    <label for="feMale">Female</label>
+                    <span id="errGender" class="error">(*)</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Language</label>
+                <div>
+                    <input type="checkbox" name="language" id="vi" onchange="fn_Language()">
+                    <label for="vi">Việt nam</label>
+                    <input type="checkbox" name="language" id="en" onchange="fn_Language()">
+                    <label for="en">English</label>
+                    <input type="checkbox" name="language" id="de" onchange="fn_Language()">
+                    <label for="de">Germany</label>
+                    <span id="errLanguage" class="error">(*)</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div>
+                    <input type="email" name="email" id="email">
+                    <span id="errEmail" class="error">(*)</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="about">About</label>
+                <div>
+                    <textarea name="about" id="about" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for=""></label>
+                <input type="submit" name="btnSubmit" id="btnSubmit"
+                    value="Submit" class="btn btn-primary" 
+                    onclick="return fn_FormSubmit();"/>
+            </div>
+            
+        </form>
+    </section>
+
+
+
+    <script src="../js/registration.js"></script>
+</body>
+</html>

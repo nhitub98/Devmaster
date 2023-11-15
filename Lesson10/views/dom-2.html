@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event in DOM javascript</title>
+</head>
+<body>
+    <section id="zone1">
+        <h1 onload="alert('h1 hello');">Event in DOM javascript</h1>
+    </section>
+    <section id="zone2">
+        <form action="">
+            <div>
+                <label for="txt">Text:</label>
+                <div>
+                    <input type="text" name="txt" id="txt"
+                        onmousemove="fn_MouseOver(this)"
+                        onmouseout="fn_MouseOut(this)"
+                        onkeyup="fn_KeyUp(this);"
+                        onchange="fn_Change(this)">
+                    <span id="errTxt">(*)</span>
+                </div>
+            </div>
+            <input type="button" value="Click here" name="btnClick"
+                onclick="fn_Click()">
+        </form>
+    </section>
+
+    <script>
+        // onClick
+        const fn_Click = ()=>{
+            // alert(this);
+            console.log(this);
+            console.log(this.value);
+            // lấy giá trị trên input
+            val = document.getElementById("txt").value;
+            console.log(val);
+        }
+        // onChange
+        const fn_Change = (e)=>{
+            // lấy giá trị
+            console.log(e);
+            val = e.value;
+            console.log(val);
+            if(val==""){
+                document.getElementById("errTxt").innerHTML="Không để trống";
+                document.getElementById("errTxt").style.color="Red";
+            }else{
+                document.getElementById("errTxt").innerHTML="OK Rồi đó";
+                document.getElementById("errTxt").style.color="Green";
+            }
+        }
+        // onKeyUp
+        const fn_KeyUp = (e)=>{
+            val =e.value;
+            if(val==""){
+                document.getElementById("errTxt").innerHTML="Bạn phải nhập dữ liệu";
+                document.getElementById("errTxt").style.color="Red";
+            }else{
+                if(val.length >=6){
+                    document.getElementById("errTxt").innerHTML="OK Rồi đó";
+                    document.getElementById("errTxt").style.color="Green";
+                }else{
+                    document.getElementById("errTxt").innerHTML=val;
+                    document.getElementById("errTxt").style.color="Blue";
+                }
+            }
+        }
+        //onMouseover
+        const fn_MouseOver = (e)=>{
+            e.style.border = "2px solid red";
+        }
+        // onmouseout
+        const fn_MouseOut = (e)=>{
+            e.style.border ="1px solid black";
+        }
+    </script>
+</body>
+</html>

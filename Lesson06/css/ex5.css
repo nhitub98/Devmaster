@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#product{
+    margin: 2rem;
+    padding: 1rem 0;
+    background-color: #ccc;
+}
+.container{
+    margin: .5rem;
+    background-color: #fff;
+}
+#product .img img{
+    width: 100%;
+    height: 6rem;
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+}
+.col {
+    width: 100%;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.item-thumbnail{
+    margin: 1rem;
+    padding: .5rem;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+}
+#product .img{
+    position: relative;
+}
+#product  .icon-btn{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    gap: .5rem;
+
+}
+.icon-btn button{
+    border: 1px solid #ccc;
+    padding: .5rem;
+}
+.item-thumbnail:hover .icon-btn{
+    display: flex !important;
+}
+.content {
+    text-align: center;
+}
+
+.content h4{
+    margin:1rem; 
+}
+.content p {
+    margin-bottom: 1rem;
+}
+
+.item-thumbnail:hover {
+    box-shadow: 0 1px 7px 0 rgb(0 0 0 / 35%);
+}
+
+/* 6 item  */
+
+/* responsive */
+@media screen and (min-width: 412px) {
+    body{
+        background-color: blue;
+    }
+    /* 1 item */
+    .col{
+        width: 100%;
+    }
+    .container{
+        margin: .5rem;
+    }
+}
+@media screen and (min-width: 568px) {
+    body{
+        background-color: blue;
+    }
+    /* 2 item  */
+    .col{
+        width: 50%;
+    }
+}
+@media screen and (min-width: 768px) {
+    body{
+        background-color: blue;
+    }
+    /* 3 item  */
+    .col{
+        width: 33.333334%;
+    }
+}
+@media screen and (min-width: 1024px) {
+    body{
+        background-color: green;
+    }
+    /* 4 item  */
+    .col{
+        width: 25%;
+    }
+    .container{
+        margin: 1rem;
+    }
+}
+@media screen and (min-width: 1600px) {
+    body{
+        background-color: yellow;
+    }
+    /* 5 item  */
+    .col{
+        width: 20%;
+    }
+    .container{
+        margin: 1rem 10%;
+    }
+}
+@media screen and (min-width: 1900px) {
+    body{
+        font-size: 20px;
+        background-color: yellow;
+    }
+    /* 6 item  */
+    .col{
+        width: 16.666667%;
+    }
+    .container{
+        margin: 1rem 10%;
+    }
+}

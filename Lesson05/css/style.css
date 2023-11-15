@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    font-size: 18px;
+    font-family: "Roboto-Regular";
+}
+h1{
+    font-size: 3.5rem;
+    font-family: "DevBeauty";
+    color: green;
+}
+h2{
+    font-size: 3rem;
+    font-family: "Roboto-Bold";
+    color: #2c2e53;
+    text-transform: uppercase;
+}
+h3{
+    font-size: 2.5rem;
+    font-family: "Roboto-Medium";
+    color: violet;
+}
+span{
+    font-family: "Roboto-Thin";
+    font-size: .8rem;
+}

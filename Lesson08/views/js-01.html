@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhúng js vào trang html </title>
+    
+</head>
+<body>
+    <section id="zone">
+        <h1>Nhúng js vào trang html</h1>
+        <pre>
+            1. Inline
+            2. Internal
+            3. External 
+        </pre>
+    </section>
+    <section id="zone2">
+        <button onclick="alert('Tôi vừa chọn đấy')">Click here</button>
+        <hr>
+        <button onclick="display();">Dùng Internal</button>
+        <hr>
+        <a href="javascript:void(0)">Click</a>
+    </section>
+
+    <script>
+        // internal 
+        function display(){
+            alert("Welcome to Devmaster");
+        }
+    </script>
+    <script src="../js/js-01.js">
+        // External 
+    </script>
+</body>
+</html>

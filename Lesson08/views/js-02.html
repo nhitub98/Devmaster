@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Các khái niệm cơ bản trong ngôn ngữ javascript</title>
+</head>
+<body>
+    <section id="zone1">
+        <h1>Các khái niệm cơ bản trong ngôn ngữ javascript</h1>
+        <hr>
+        <pre>
+            - Biến, hằng, kiểu dữ liệu ,
+            toán tử, toán hạng, biểu thức, câu lệnh, khối lệnh ,...
+            - Hàm hệ thống: alert / confirm / prompt
+        </pre>
+    </section>
+
+    <!-- xử lý với ngôn ngữ javascript -->
+    <script>
+        // Khái niệm cơ bản
+        var bien;
+        bien = "devmaster.edu.vn";
+        document.write("<h2> " + bien + "</h2>");
+        alert("Welcome to," + bien);
+
+        a=parseFloat(prompt('Nhập số a='));
+        b=parseFloat(prompt("Nhập số b:"));
+
+        document.write("<p> a=" + a);
+        document.write("<p> b=" + b);
+            
+        c= a+b;
+        console.log("kết quả:", c);
+        // test các toán tử số học: -; *; /; %; ++; --
+        c=a-b;
+        console.log(a+"-"+b+"="+c);
+        c=a*b;
+        console.log(a+"x"+b+"="+c);
+
+        
+    </script>
+</body>
+</html>

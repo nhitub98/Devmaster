@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cấu trúc điều khiển</title>
+</head>
+<body>
+    <section id="zone1">
+        <h1>Cấu trúc điều khiển</h1>
+        <hr>
+        <pre>
+            *** Có 3 loại cấu trúc điều khiển.
+            1. Cấu trúc lựa chọn / rẽ nhánh
+                1.a: if  => (4 dạng if )
+                    Dạng 1: if đơn
+                        if(expression){
+                            statement;
+                        }
+                    Dạng 2: if đầy đủ
+                        if(expression){
+                            statement - true;
+                        }else{
+                            statement - false;
+                        }
+                    Dạng 3: if bậc thang
+                        if(expression-1){
+                            statement - 1;
+                        }else if(expression-2){
+                            statement - 2;
+                        }
+                        ... 
+                        else{
+                            statement n+1;
+                        }
+                    Dạng 4: if lồng nhau (nested if )
+                        if(expression){
+                            statement;
+                            if(...){...};
+
+                        }else{
+
+                        }
+
+                1.b: switch 
+                    switch(expression){
+                        case value1:
+                            statement1;
+                            break;
+                        case value2:
+                            statement2;
+                            break;
+
+                        .... 
+                        [default:
+                            statement n+1;
+                        ]
+                    }
+
+            2. Cấu trúc lặp (loop)
+                2.a: for (4 dạng)
+                Dạng 1:  for đầy đủ 
+                    for(init ; condition ; step){
+                        statement;
+                    }
+                Dạng 2: for khuyết
+                init;
+                    for( ; condition ; step){
+                        statement;
+                    }
+                Khuyết condition: (lặp trong điều kiện luôn đúng)
+                    for( init;  ; step){
+                        statement;
+                    }
+                Khuyết step:
+                    for( init; condition ; ){
+                        statement;
+                    }
+                Dạng 3: Khuyết toàn bộ
+                initial;
+                    for(;;){
+                        statement;
+                    }
+                Dạng 4: for không thân 
+                    for(init, statement; condition ; step, statement){}
+
+            
+                2.b: while
+                    while(expression_condition){
+                        statement - true;
+                    }
+
+                2.c: do...while
+                    do{
+                        statement;
+                    }while(expression_condition);
+
+                2.d: foreach
+                    for(let _variable in collection){
+                        statement;
+                    }
+            3. Lệnh nhảy
+                break;
+                continue;
+                return; 
+        </pre>
+    </section>
+    
+
+</body>
+</html>

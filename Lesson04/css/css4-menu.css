@@ -3,6 +3,7 @@
     padding: 0;
 }
 nav{
+    margin: 5rem;
     background-color: #ccc;
 }
 nav ul {
@@ -26,5 +27,6 @@ nav ul li a{
     color: #484848;
 }
 nav ul li a:hover{
-    background-color:#ddd ;
+    background-color:green ;
+    color: #fff;
 }

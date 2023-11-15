@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+    <section id="zone1">
+        <h1>Giải phương trình bậc nhất: 
+            <br>
+            a.X + b = 0
+        </h1>
+        <hr>
+        <form name="frm" action="">
+            <p> Hệ số a: 
+                <input type="text" name="soA" id="soA">
+            </p>
+            <p>
+                Hệ số b:
+                <input type="text" name="soB" id="soB">
+            </p>
+            <button onclick="giaiPT();" type="button">Giải PT</button>
+            <p>Kết quả:
+                <input type="text" name="ketQua" id="ketQua" readonly>
+            </p>
+        </form>
+    </section>
+
+    <script>
+        function giaiPT(){
+            // lấy giá trị trên form
+            a= parseFloat(frm.soA.value); 
+            b= parseFloat(frm.soB.value);
+            // Giải phương trình
+            if(a==0){
+                if(b==0){
+                    console.log("Pt vô số nghiệm");
+                    frm.ketQua.value="Pt vô số nghiệm";
+                }else{// b!=0
+                    console.log("Pt vô nghiệm");
+                    frm.ketQua.value="Pt vô  nghiệm";
+                }
+            }else{ // a!=0
+                x=-b/a;
+                console.log("Nghiem pt:",x);
+                frm.ketQua.value="Nghiệm x="+x;
+            }
+
+            // => giải phương trình bậc 2: ax^2+bx+c=0;
+        }
+    </script>
+</body>
+</html>

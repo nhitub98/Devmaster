@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số ngày trong tháng năm</title>
+<style>
+    form{
+        margin: 1rem 10%;
+        background-color: #ccc;
+        padding: 1rem;
+    }
+    label{
+        display: inline-block;
+        width: 5rem;
+    }
+    input[type="number"],
+    input[type="text"]{
+        width: calc(100% - 6rem);
+        border: 1px solid green;
+    }
+    input[type="number"]:focus,
+    input[type="button"]:focus
+    {
+        outline: none;
+        border-color: red;
+    }
+    input[type="button"]{
+        border: 1px solid green;
+        padding: .25rem 1rem;
+        cursor: pointer;
+    }
+    form > div{
+        margin: .5rem 0;
+    }
+</style>
+</head>
+<body>
+    <section id="zone1">
+        <h1>Số ngày trong tháng năm</h1>
+        <hr/>
+        <form name="frm" action="" method="post">
+            <div>
+                <label for="thang">Tháng</label>
+                <input type="number" name="thang" id="thang">
+            </div>
+            <div>
+                <label for="nam">Năm</label>
+                <input type="number" name="nam" id="nam">
+            </div>
+            <div>
+                <label for=""></label>
+                <input type="button" name="btnNgay" id="btnNgay" value="Tính" onclick="tinhSoNgay();">
+            </div>
+            <div>
+                <label for="ketQua">Kết quả</label>
+                <input type="text" name="ketQua" id="ketQua" disabled>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        function tinhSoNgay(){
+            // lấy dữ liệu trên form
+            let thang = parseInt(frm.thang.value);
+            let nam = parseInt(frm.nam.value);
+            let soNgay=0;
+            // tính số ngày
+            switch(thang){
+                case 1: 
+                case 3:
+                case 5: 
+                case 7: 
+                case 8: 
+                case 10: 
+                case 12: 
+                    soNgay = 31;
+                    break;
+                case 4: 
+                case 6: 
+                case 9:
+                case 11: 
+                    soNgay=30;
+                    break ;
+                case 2:
+                    if((nam % 4==0 && nam % 100 !=0) || nam % 400 ==0){
+                        soNgay = 29;
+                    }
+                    else{
+                        soNgay = 28;
+                    }
+                    break;
+                default:
+                    alert('Bạn  nhập sai tháng / năm');
+                    frm.ketQua.value="Bạn  nhập sai tháng / năm";
+            }
+            if(soNgay>0){
+                frm.ketQua.value = "Tháng " + thang + " năm " + nam + " có " + soNgay +" ngày!";
+            }
+        }
+    </script>
+</body>
+</html>

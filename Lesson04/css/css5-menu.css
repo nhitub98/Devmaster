@@ -3,6 +3,7 @@
     padding: 0;
 }
 nav{
+    margin: 3rem;
     background-color: #ccc;
     margin: 1rem;
     width: 200px;
@@ -24,10 +25,11 @@ nav ul li a{
     text-decoration: none;
     padding: .5rem;
     border-bottom: 1px solid #999;
+    color: #000;
 }
 nav a:hover {
-    background-color: #ddd;
-    color: red;
+    background-color: green;
+    color: yellow;
 }
 nav ul li:last-child a{
     border: 0px;

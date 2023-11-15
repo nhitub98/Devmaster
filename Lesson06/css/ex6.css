@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    font-size: 10px;
+    background-color: red;
+}
+/* // X-Small devices (portrait phones, less than 576px) */
+/* // No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    html,body{
+        font-size: 11px;
+        background-color: blue;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    html,body{
+        font-size: 12px;
+        background-color: green;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    html,body{
+        font-size: 13px;
+        background-color: orange;
+    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    html,body{
+        font-size: 14px;
+        background-color: black;
+    }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    html,body{
+        font-size: 15px;
+        background-color: #fff;
+    }
+}
+
+@media (min-width: 1600px) { 
+    html,body{
+        font-size: 16px;
+        background-color: #ccc;
+    }
+}

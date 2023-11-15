@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tổng</title>
+    <style>
+        form{
+            margin: 1rem 10%;
+            background-color: #ccc;
+            padding: 1rem;
+        }
+        label{
+            display: inline-block;
+            width: 5rem;
+        }
+        input[type="number"],
+        input[type="text"]{
+            width: calc(100% - 6rem);
+            border: 1px solid green;
+        }
+        input[type="number"]:focus,
+        input[type="button"]:focus
+        {
+            outline: none;
+            border-color: red;
+        }
+        input[type="button"]{
+            border: 1px solid green;
+            padding: .25rem 1rem;
+            cursor: pointer;
+        }
+        form > div{
+            margin: .5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <section id="zone1">
+        <h1>In dãy số nguyên từ 1 đến num theo cong thức tính tổng</h1>
+        <pre>
+            num:4;
+            1+2+3+4=10;
+        </pre>
+        <hr/>
+        <form name="frm" action="" method="post">
+            <div>
+                <label for="num">Nhập một số</label>
+                <input type="number" name="num" id="num">
+            </div>
+            <div>
+                <label for=""></label>
+                <input type="button" name="btnTinh" id="btnTinh" value="Tính" 
+                    onclick="tinhTong();">
+            </div>
+            <div>
+                <label for="ketQua">Kết quả</label>
+                <input type="text" name="ketQua" id="ketQua" disabled>
+            </div>
+        </form>
+    </section>
+    <script>
+        const tinhTong = ()=>{ // 15
+            // lấy giá trị trên form
+            let num = parseInt(frm.num.value);
+            // Thực hiện tính toán.
+            str = "";
+            tong =0;
+            for (let i = 1; i <= num; i++) {
+                if(i==num){
+                    str += i + "=";
+                }else{
+                    str += i + "+";
+                }
+                tong +=i;
+            }
+            // in kết quả
+            frm.ketQua.value = str + tong;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+    <section id="zone1">
+        <h1>Giải phương trình bậc nhất: 
+            <br>
+            a.X + b = 0
+        </h1>
+        <hr>
+        <form name="frm" action="">
+            <p> Hệ số a: 
+                <input type="text" name="soA" id="soA">
+            </p>
+            <p>
+                Hệ số b:
+                <input type="text" name="soB" id="soB">
+            </p>
+            <p>
+                Hệ số c:
+                <input type="text" name="soC" id="soC">
+            </p>
+            <button onclick="giaiPT();" type="button">Giải PT</button>
+            <p>Kết quả:
+                <input type="text" name="ketQua" id="ketQua" readonly>
+            </p>
+        </form>
+    </section>
+
+    <script>
+        // => giải phương trình bậc 2: ax^2+bx+c=0;
+        function giaiPT(){
+            // lấy giá trị trên form
+            a= parseFloat(frm.soA.value); 
+            b= parseFloat(frm.soB.value);
+            c= parseFloat(frm.soC.value);
+            // Giải phương trình
+            kq="";
+            if(a==0){
+                if(b==0){
+                    if(c==0){
+                        kq="Pt vô số nghiệm"
+                    }else{
+                        kq="Phương trình vô nghiệm"
+                    }
+                }else{// b!=0
+                    kq="Nghiệm phương trình x="+(-c/b);
+                }
+            }else{ // a!=0
+               // tính delta
+                delta = b*b - 4*a*c;
+                if(delta >0){
+                    x1=(-b - Math.sqrt(delta))/(2*a);
+                    x2=(-b + Math.sqrt(delta))/(2*a);
+                    kq="x1="+x1+"; x2="+x2;
+                }else if(delta==0){
+                    x=-b/(2*a);
+                    kq="Nghiệm kép x1=x2="+x;
+                }else{
+                    kq="Phương trình vô nghiệm"
+                }
+            }
+
+            frm.ketQua.value = kq;
+            
+        }
+    </script>
+</body>
+</html>

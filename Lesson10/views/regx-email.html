@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Email</title>
+    <style>
+        form{
+            margin: 1rem 10%;
+            background-color: #ccc;
+            padding: 1rem;
+        }
+        label{
+            display: inline-block;
+            width: 6rem;
+        }
+        input[type="number"],
+        input[type="text"]{
+            width: calc(100% - 7rem);
+            border: 1px solid green;
+        }
+        input[type="number"]:focus,
+        input[type="button"]:focus
+        {
+            outline: none;
+            border-color: red;
+        }
+        input[type="button"]{
+            border: 1px solid green;
+            padding: .25rem 1rem;
+            cursor: pointer;
+        }
+        form > div{
+            margin: .5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <section id="zone1">
+        <h1>Tính toán với mảng</h1>
+        <hr/>
+        <form name="frm" action="" method="post">
+            <div>
+                <label for="email">Nhập</label>
+                <input type="text" name="email" id="email" onkeyup="fnKeyCheck();">
+                <span>(*)</span>
+            </div>
+            <div>
+                <label for=""></label>
+                <input type="button" name="btnCheck" id="btnCheck" value="Check" 
+                    onclick="fnCheck();">
+            </div>
+            <div>
+                <label for="ketQua">Kết quả</label>
+                <input type="text" name="ketQua" id="ketQua" disabled>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        const fnCheck = ()=>{
+            // lấy dữ liệu trên form thông qua dom
+            let em = email.value; // document.getElementById("email")
+            console.log(em);
+            // mẫu định dạng
+            // regxEmail = /^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-z]{2,4}$/;
+            // regxEmail = /^[a-zA-Z0-9.]+[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-z]{2,4}$/;
+            regxEmail = /^[a-zA-Z0-9.]+[a-zA-Z0-9]+@[a-zA-Z0-9]+(\.[a-zA-Z]{2,4})*\.[a-z]{2,4}$/;
+            if(regxEmail.test(em)){
+                ketQua.value="Đúng định dạng";
+            }else{
+                ketQua.value="Sai định dạng";
+            }
+
+            phone = /^[0][1-9]{9}$/; // 0978611889; 
+        }
+
+        const fnKeyCheck = ()=>{
+            let em = email.value;
+            regxEmail = /^[a-zA-Z0-9.]+[a-zA-Z0-9]+@[a-zA-Z0-9]+(\.[a-zA-Z]{2,4})*\.[a-z]{2,4}$/;
+            if(regxEmail.test(em)){
+                document.querySelectorAll("input[name='email'] + span")[0].innerHTML=
+                    "<b style='color:green'> Đúng định dạng </b>";
+            }else{
+                document.querySelectorAll("input[name='email'] + span")[0].innerHTML=
+                    "<b style='color:red'> Sai định dạng </b>";
+            }
+        }
+
+        // thực hành phần form đăng ký thông tin; kiểm tra dữ liệu với DOM
+    </script>
+</body>
+</html>

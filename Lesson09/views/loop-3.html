@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vòng lặp lồng nhau</title>
+    <style>
+        form{
+            margin: 1rem 10%;
+            background-color: #ccc;
+            padding: 1rem;
+        }
+        label{
+            display: inline-block;
+            width: 6rem;
+        }
+        input[type="number"],
+        input[type="text"]{
+            width: calc(100% - 7rem);
+            border: 1px solid green;
+        }
+        input[type="number"]:focus,
+        input[type="button"]:focus
+        {
+            outline: none;
+            border-color: red;
+        }
+        input[type="button"]{
+            border: 1px solid green;
+            padding: .25rem 1rem;
+            cursor: pointer;
+        }
+        form > div{
+            margin: .5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <section id="zone1">
+        <h1>Tính toán với mảng</h1>
+        <pre>
+           Nhập một số từ 2-9;
+           => in ra bảng cửu chương tương ứng
+           ngược lại: in ra các bảng cửu chương từ 2 đến 9
+        </pre>
+        <hr/>
+        <form name="frm" action="" method="post">
+            <div>
+                <label for="num">Nhập một số</label>
+                <input type="number" name="num" id="num">
+            </div>
+            <div>
+                <label for=""></label>
+                <input type="button" name="btnTinh" id="btnTinh" value="Tính" 
+                    onclick="print();">
+            </div>
+            <div>
+                <label for="ketQua">Kết quả</label>
+                <input type="text" name="ketQua" id="ketQua" disabled>
+            </div>
+        </form>
+    </section>
+    <script>
+        const print = ()=>{ // 15
+            // lấy giá trị trên form
+            let num = parseInt(frm.num.value);
+            // Thực hiện tính toán.
+            if(num<2 || num > 9){
+                for (let i = 1; i <= 9; i++) {
+                    for (let j = 2; j<=9; j++){
+                        document.write("<p>" + i + " x " + j + " = " + i*j);
+                    }
+                    document.write("<hr/>");
+                }
+            }else{
+                for (let i = 1; i <= 9; i++) {
+                   document.write("<p>" + i + " x " + num + " = " + i*num);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
