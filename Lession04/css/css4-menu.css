@@ -1,0 +1,29 @@
+*{
+    margin:0;
+    padding:0;
+}
+nav{
+    background-color: #ccc;
+}
+nav ul{
+    display: flex; /*dàn hàng ngang*/
+    list-style: none; /*bỏ chỉ mục*/
+}
+nav ul li:last-child a{
+  border-right:0px solid red; /* hiển thị ô li */
+    /* padding: 1rem; */
+    /* padding: .25rem 0rem; */
+}
+nav ul li a{
+    
+   /* background-color: green; */
+   border-right:1px solid red; /* hiển thị ô li */
+    display: block;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    color: #484848;
+}
+nav ul li a:hover{
+    background-color: #ddd;
+
+}

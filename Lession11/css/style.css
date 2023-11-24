@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    margin: 1rem 10%;
+    /* width: 1024px; */
+}
+form{
+    background-color: #ccc;
+    border: 1px solid #ddd;
+    padding: 1rem;
+}
+.form-group {
+    display: flex;
+    margin: .5rem 0;
+}
+.form-group label{
+    display: inline-block;
+    width: 5rem;
+}
+.form-group div {
+    width: calc(100% - 5rem);
+}
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+select
+ {
+    width: calc(100% - 2rem );
+    border: 1px solid green;
+    padding: .25rem;
+}
+.form-group input[type="text"]:focus ,
+.form-group input[type="number"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+select:focus{
+    outline: none;
+    border: 1px solid red;
+}
+.form-group select{
+    width: calc(100% - 1.5rem );
+}
+.form-group  span.error {
+    color: red;
+    font-size: .75rem;
+    font-style: italic;
+}
+textarea{
+    width: calc(100% - 2.5rem);
+    border: 1px solid green;
+    padding: .5rem;
+}
+textarea:focus{
+    outline: none;
+    border: 1px solid red;
+}
+.btn {
+    border: 1px solid green;
+    padding: .25rem .5rem;
+}
+.btn-primary {
+    background-color: green;
+    color: #fff;
+}
+.btn-primary:hover{
+    color: yellow;
+    background-color: rgba(7, 188, 7,.75);
+    cursor: pointer;
+}

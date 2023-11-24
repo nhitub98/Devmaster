@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+	        margin:0px;
+	        padding:0px;
+}
+.clearfix {
+            clear: both;
+            overflow: hidden;
+        }
+#tabButton ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+#tabButton ul li {
+            float: left;
+            margin-right: 5px;
+        }
+#tabButton ul li a {
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+            padding: 8px 20px;
+            display: block;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            text-decoration: none;
+            background: #d2d3d5;
+            color: #fff;
+        }
+#tabButton ul li .active{
+            background: #782a90 !important;
+            color: #fff !important;
+            border-top: 2px solid #782a90;
+        }     
+        #tabContent {
+            border: 1px solid #ccc;
+            width: 500px;
+            height: 600px;
+            margin-top: -1px;
+            padding: 5px 10px;
+        }
+        #tabContent .tab{
+            display:none; 
+            box-sizing:border-box;
+            padding:10px;
+}
+        #tabContent .active{
+	        display:block;
+            width: 500px;
+            height: 600px;
+            margin-top: -1px;
+            padding: 5px 10px;
+}
+    </style>
+</head>
+<body>
+            <div id="tabButton" class="clearfix">
+                <ul class="clearfix">
+                    <li><a data-tabName="html" class="active" href="#">HTML</a></li>
+                    <li><a data-tabName="css" href="#">CSS</a></li>
+                    <li><a data-tabName="jquery" href="#">Jquery</a></li>
+                    <li><a data-tabName="php" href="#">PHP</a></li>
+                </ul>
+            </div>
+            <div id="tabContent">
+                
+                <div class="tab active" id="html">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ipsa numquam incidunt, quaerat dolorem consectetur quisquam mollitia eaque a veniam porro beatae suscipit fuga perspiciatis eligendi magnam nemo fugiat quis doloribus eum quo voluptas repudiandae. Mollitia reprehenderit exercitationem ut. Mollitia sunt fuga asperiores perspiciatis, exercitationem sed minima expedita quae corrupti quis. Rem magnam excepturi dolorum nostrum recusandae doloribus illo beatae praesentium labore fugit sequi sapiente iste debitis ex, veritatis natus commodi sit, laudantium eveniet, adipisci delectus quaerat tenetur. Deserunt earum adipisci numquam ab a, alias voluptatum dolores vel delectus. Quasi porro modi odit quam quae in aut ipsam dolore animi.que a veniam porro beatae suscipit fuga perspiciatis eligendi magnam nemo fugiat quis doloribus eum quo voluptas repudiandae. Mollitia <a id="switchToPHP" href="#"><b>Switch To PHP Tab</b></a> reprehenderit exercitationem ut. Mollitia sunt fuga asperiores perspiciatis, exercitationem sed minima expedita quae corrupti quis. Rem magnam excepturi dolorum nostrum recusandae doloribus illo beatae praesentium labore fugit sequi sapiente iste debitis ex, veritatis natus commodi sit, laudantium eveniet, adipisci delectus quaerque a veniam porro beatae suscipit fuga perspiciatis eligendi magnam nemo fugiat quis doloribus eum quo voluptas repudiandae. Mollitia reprehenderit exercitationem ut. Mollitia sunt fuga asperiores perspiciatis, exercitationem sed minima expedita quae corrupti quis. Rem magnam excepturi dolorum nostrum recusandae doloribus illo beatae praesentium labore fugit sequi sapiente iste debitis ex, veritatis natus commodi sit, laudantium eveniet, adipisci delectus quaer</p>
+                </div>
+                
+                <div class="tab"  id="css">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ipsa numquam incidunt, quaerat dolorem consectetur quisquam mollitia eaque a veniam porro beatae suscipit fuga perspiciatis eligendi magnam nemo fugiat quis doloribus eum quo voluptas repudiandae. Mollitia reprehenderit exercitationem ut. Mollitia sunt fuga asperiores perspiciatis, exercitationem sed minima eque a veniam porro beatae suscipit fuga perspiciatis eligendi magnam nemo fugiat quis doloribus eum quo voluptas repudiandae. Mollitia reprehenderit exercitationem ut. Mollitia sunt fuga asperiores perspiciatis, exercitationem sed minima expedita quae corrupti quis. Rem magnam excepturi dolorum nostrum recusandae doloribus illo beatae praesentium labore fugit sequi sapiente iste debitis ex, veritatis natus commodi sit, laudantium eveniet, adipisci delectus quaerxpedita quae corrupti quis.  Rem magnam excepturi dolorum nostrum recusandae doloribus illo beatae praesentium labore fugit sequi sapiente iste debitis ex, veritatis natus commodi sit, laudantium eveniet, adipisci delectus quaerat tenetur. Deserunt earum adipisci numquam ab a, alias voluptatum dolores vel delectus. Quasi porro modi odit quam quae in aut ipsam dolore animi.</p>
+                </div>
+                    
+                
+                <div class="tab" id="jquery">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ipsa numquam incidunt, quaerat dolorem consectetur quisquam mollitia eaque a veniam porro beatae suscipit fuga perspiciatis eligendi magnam nemo fugiat quis doloribus eum quo voluptas repudiandae. Mollitia reprehenderit exercitationem ut. Mollitia sunt fuga asperiores perspiciatis, exercitationem sed minima expedita quae corrupti quis. Rem magnam excepturi dolorum nostrum recusandae doloribus illo beatae praesenque a veniam porro beatae suscipit fuga perspiciatis eligendi magnam nemo fugiat quis doloribus eum quo voluptas repudiandae. Mollitia reprehenderit exercitationem ut. Mollitia sunt fuga asperiores perspiciatis, exercitationem sed minima expedita quae corrupti quis. Rem magnam excepturi dolorum nostrum recusandae doloribus illo beatae praesentium labore fugit sequi sapiente iste debitis ex, veritatis natus commodi sit, laudantium eveniet, adipisci delectus quaertium labore fugit sequi sapiente iste debitis ex, veritatis natus commodi sit, minima expedita quae corrupti quis. Rem magnam excepturi dolorum nostrum recusandae doloribus illo beatae praesentium labore fugit sequi sapiente iste debitis ex, veritatis natus commodi sit, laudantium eveniet, adipisci delectus quaerque a veniam porro beatae suscipit fuga perspiciatis eligendi magnam nemo fugiat quis doloribus eum quo voluptas repudiandae. Mollitia reprehenderit exercitationem ut. Mollitia sunt fuga asperiores perspiciatis, exercitationem sed minima expedita quae corrupti quis. Rem magnam excepturi dolorum nostrum recusandae doloribus illo beatae praesentium labore fugit sequi sapiente iste debitis ex, veritatis natus commodi sit, laudantium eveniet, adipisci delectus quaerorro modi odit quam quae in aut ipsam dolore animi.</p>
+                </div>
+                
+                <div class="tab" id="php">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ipsa numquam incidunt, quaerat dolorem consectetur quisquam mollitia eae. Mollitia reprehenderit exercitationem ut. Mollitia sunt fuga asperiores perspiciatis, exercitationem sed minima expedita quae corrupti quis. Rem magnam excepturi dolorum nostrum recusandae doloribus illo beatae praesentium labore fugit sequi sapiente iste debitis ex, veritatis natus commodi sit, laudantium eveniet, adipisci delectus quaerque a veniam porro beatae suscipit fuga perspiciatis eligendi magnam nemo fugiat quis doloribus eum quo voluptas repudiandae. Mollitia reprehenderit exercitationem ut. Mollitia sunt fuga asperiores perspiciatis, exercitationem sed minima expedita quae corrupti quis. Rem magnam excepturi dolorum nostrum recusandae doloribus illo beatae praesentium labore fugit sequi sapiente iste debitis ex, veritatis natus commodi sit, laudantium eveniet, adipisci delectus quaerentium labore fugit sequi sapiente iste debitis ex, veritatis natus commodi sit, laudantium eveniet, adipisci delectus quaerat tenetur. Deserunt earum adipisci numquam ab a, alias voluptatum dolores vel delectus. Quasi porro modi odit quam quae in aut ipsam dolore animi.</p>
+                </div>
+            </div>
+        </div>
+     
+    </div>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+	//main tab
+	$("#tabButton ul li a").click(function(e){
+		
+		// active deactivate tab buttons
+		$("#tabButton ul li a").removeClass('active');
+		$(this).addClass('active');
+		
+		// show hide tab content
+		var tabName = $(this).attr('data-tabName');
+		$("#tabContent .tab").removeClass('active');
+		$("#tabContent #"+tabName).addClass('active');
+		
+		// stop reload
+		e.preventDefault();
+	})
+	
+	// tab switch from any button
+	$("#switchToPHP").click(function(e){
+		var tabName = "php"; // tab name
+		
+		$("#tabButton ul li a").removeClass('active'); // remove from all buttons
+		$("#tabButton ul li a[data-tabName="+tabName+"]").addClass('active'); // add to the targeted button
+		
+		$("#tabContent .tab").removeClass('active'); // remove from all tabs
+		$("#tabContent #"+tabName).addClass('active'); // add to the targedted tabs
+		
+		e.preventDefault();
+	});
+});
+
+
+    </script>
+</body>
+</html>

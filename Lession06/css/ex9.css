@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #fff;
+}
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 5rem;
+    background: #fff;
+}
+
+.brand a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #e6e5e8;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    list-style-type: none;
+    margin-left: 3rem;
+}
+
+li > a{
+    text-decoration: none;
+    color: #191834;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+
+li::after {
+    content: '';
+    width: 0rem;
+    height: 0.15rem;
+    background-color: #d7cd42;
+    display: block;
+    border-radius: 0.2rem;
+    margin: 0.2rem auto 0 auto;
+    transition: all 0.3s ease-in-out;
+}
+
+li:hover::after {
+    width: 2rem;
+}
+nav a:hover{
+  
+    color:#d7cd42;
+}
+.imgfooter{
+  margin: left;
+  
+}
+.end{
+    margin-right: 50px;
+}
+address{
+    margin-right: 100px;
+}
+footer{
+    background: #2d303a;
+    padding: 22px 0;
+}
+footer .footer{
+    float:right;
+}
+footer address{
+    float:left;
+    width: 300px;
+    padding-top: 10px;
+    color:#c5c5c5;
+}
+.container{
+    margin: 1rem 10%;
+    padding:1rem;
+    background-color: #fff;
+}
+
+footer{
+    background: #fff;
+    padding: 22px 0;
+}
+footer .footer{
+    float:right;
+}
+.container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+img{
+    width:100%;
+    height:auto;
+}
+.box{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width:30rem;
+    min-width:18rem;
+    margin: 10px;
+    text-align: left;
+
+}
+.button {
+    background-color: #292853; 
+    border: none;
+    color: white;
+    padding: 10px 11px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+  }
+address ul li a{
+ align-items: right;
+}

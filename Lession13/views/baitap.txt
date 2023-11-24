@@ -1,0 +1,10 @@
+- Sử dụng Bootstrap 
+- Thiết kế trang đơn giản:
++ header
++ menu
++ carosule
++ slick (item)
++ footer 
+Tham khảo trang chủ acatea
+---------
+https://www.youtube.com/watch?v=n4OVF2tZ99c&t=4s

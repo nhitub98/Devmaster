@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album...</title>
+    <style>
+        #main{
+            margin: 1rem auto;
+            width: 500px;
+            border: 1px solid #ccc;
+        }
+        .thumbnail-big img{
+            width: 100%;
+            max-height: 450px;
+        }
+        .thumbnail-small{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .thumbnail-small img{
+            width: 10%;
+        }
+        .border-img{
+            border:2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <section id="main">
+        <div class="thumbnail-big">
+            <img src="../images/Industries_01.jpg" alt="001">
+        </div>
+        <div class="thumbnail-small">
+            <img src="../images/img1.jpg" alt="001">
+            <img src="../images/img3.jpg" alt="001">
+            <img src="../images/img2.jpg" alt="001">
+            
+        </div>
+    </section>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".thumbnail-small img").click(function(){
+                let imgSrc = $(this).attr("src");
+                $('.thumbnail-big img').attr("src", imgSrc);
+    
+                $(".thumbnail-small img").each(function(){
+                    $(this).removeClass("border-img");
+                });
+    
+                $(this).addClass("border-img");
+            });
+        });
+    </script>
+</body>
+</html>
