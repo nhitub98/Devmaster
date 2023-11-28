@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng thư viện jquery -  Các hiệu ứng</title>
+    <style>
+        .effect{
+            width: 150px;
+            height: 150px;
+            background-color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sử dụng thư viện jquery - Các hiệu ứng</h1>
+        <hr/>
+    </header>
+    <section id="form">
+       <button>Hide</button>
+       <button>Show</button>
+       <button>FadeIn</button>
+       <button>FadeOut</button>
+       <button>Animate</button>
+       <hr/>
+       <div class="effect"></div>
+    </section>
+    <!-- nhung thư viện jquery từ server google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            let txt = $(this).text();
+            switch(txt){
+                case "Hide":
+                    $('.effect').hide();
+                    break;
+                case "Show":
+                    $('.effect').show(3000);
+                    break;
+                case "FadeIn":
+                    $('.effect').fadeIn(3000);
+                    break;
+                case "FadeOut":
+                    $('.effect').fadeOut(5000);
+                    break;
+                case "Animate":
+                    $('.effect').animate({
+                        height:"300px",
+                    },3000);
+                    break;
+
+            }
+          });
+        });
+    </script>
+</body>
+</html>

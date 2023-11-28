@@ -1,0 +1,11 @@
+*  sử dụng bootrap 
+- Thiết ké trang đơn giản:
+    + header
+    + menu
+    + carosule
+    + slick (item)
+    + footer
+tham khảo trang chủ: acatea.vn
+
+ --- 
+ https://youtu.be/n4OVF2tZ99c?si=ZX36GdK1dLFzbo3k

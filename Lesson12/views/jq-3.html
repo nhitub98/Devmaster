@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng thư viện jquery - html selector</title>
+</head>
+<body>
+    <header>
+        <h1>Sử dụng thư viện jquery - html selector</h1>
+        <hr/>
+    </header>
+    <section id="zone1">
+        <button>Click here</button> 
+        <button>Devmaster</button>
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div class="col">
+                <input type="button" value="Cick" class="btn btn-primary">
+            </div>
+        </div>
+    </section>
+    <style>
+        .btn{
+            border: 1px solid green;
+            padding: 2rem;
+        }
+    </style>
+    <!-- nhung thư viện jquery từ server google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            console.log("Jquery");
+            // 1. tương tác thông qua phần tử (thẻ) html
+            $("button").click(function(){
+                // Khi người dùng click vào thẻ button;
+                alert($(this).text());
+                // đổi màu cho thẻ h1
+                // $("h1").css("color","red");
+                $("h1").css({
+                    'background-color':'blue',
+                    'color':'yellow'
+                });
+
+                $("button").addClass("btn");
+            });
+
+            //2. Tương tác thông qua thuộc tính ID 
+            $("#zone1").hover(function(){
+                $(this).css("background","green");
+            });
+
+            // 3. Tương tác thông qua thuộc tính class
+            $(".btn-primary").click(function(){
+                alert($(this).val());
+                $(this).val("Nội dung mới");
+            })
+
+            // 4. css selector
+            // #zone1 button
+            // input[type='button']
+            // .container .btn
+            // #zone1 .btn
+            // header h1
+            $(".container input").mouseover(function(){
+                $(this).css("padding","3rem");
+            }).mouseout(function(){
+                $(this).css("padding","1rem");
+            }).click(function(){
+                $(this).css("background","red");
+            })
+
+        });
+    </script>
+</body>
+</html>

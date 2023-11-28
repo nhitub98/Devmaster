@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get data api </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+    <section id="product">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-6">
+                    <div class="item-product">
+                        <div class="img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="title">
+                            <a href=""></a>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            // get data from api: http://apixm.devmaster.vn/api/Products
+            $.getJSON('http://apixm.devmaster.vn/api/Products', function(data){
+                let element = "";
+                data.forEach(item => {
+                    console.log(item);
+                    element +=`
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                                <div class="item-product">
+                                    <div class="img">
+                                        <img src="http://apixm.devmaster.vn/${item.image}" alt="${item.title}">
+                                    </div>
+                                    <div class="title">
+                                        <a href="#">${item.title}</a>
+                                        <p>Giá: ${formatMoney(item.priceNew,0,'.',',')}<sup style="color:red">đ</sup>    
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            `;
+                    });
+                    $("#product .row").html(element);
+            });
+        });
+        function formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",") {
+            try {
+                decimalCount = Math.abs(decimalCount);
+                decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
+
+                const negativeSign = amount < 0 ? "-" : "";
+
+                let i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
+                let j = (i.length > 3) ? i.length % 3 : 0;
+
+                return negativeSign +
+                (j ? i.substr(0, j) + thousands : '') +
+                i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) +
+                (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+            } catch (e) {
+                console.log(e)
+            }
+        };
+    </script>
+</body>
+</html>

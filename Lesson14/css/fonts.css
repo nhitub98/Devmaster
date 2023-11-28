@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Sarabun-ExtraBold";
+    src: url("../fonts/Sarabun-ExtraBold.ttf");
+}
+@font-face {
+    font-family: "Sarabun-Bold";
+    src: url("../fonts/Sarabun-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Sarabun-Medium";
+    src: url("../fonts/Sarabun-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Sarabun-Regular";
+    src: url("../fonts/Sarabun-Regular.ttf");
+}

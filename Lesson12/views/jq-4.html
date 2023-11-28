@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng thư viện jquery - form</title>
+</head>
+<body>
+    <header>
+        <h1>Sử dụng thư viện jquery - html form</h1>
+        <hr/>
+    </header>
+    <section id="form">
+        <!-- login: check from > không để trống -->
+        <form action="">
+            <div class="form-group">
+                <label for="userName">UserName</label>
+                <div>
+                    <input type="text" name="userName" id="userName">
+                    <span>(*)</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Passord</label>
+                <div>
+                    <input type="password" name="password" id="password">
+                    <span>(*)</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login">
+                <input type="reset" value="Reset">
+            </div>
+            <div class="msg-error">
+                
+            </div>
+        </form>
+    </section>
+    <!-- nhung thư viện jquery từ server google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           $("input").keyup(function(){
+                let val = $(this).val().trim();
+                if(val==""){
+                    $(this).siblings("span").text($(this).attr("name") +  " không để trống")
+                    .css("color","red");
+                }else{
+                    $(this).siblings("span").text("OK").css("color","green");
+                }
+
+                // parent ; children
+
+           })
+
+           $("input[type='submit']").click(function(){
+                let msg = "";
+                $(".form-group input").each(function(){
+                    let val = $(this).val().trim();
+                    if(val==""){
+                        $(this).siblings("span").text($(this).attr("name") +  " không để trống")
+                        .css("color","red");
+                        msg += $(this).attr("name") +  " không để trống <br/>";
+                    }else{
+                        $(this).siblings("span").text("OK").css("color","green");
+                    }
+                });
+                if(msg !=""){
+                    // $(this).siblings("span").html(msg);
+                    $(this).parent().siblings(".msg-error").html(msg).css("color","red");
+                    return false;
+                }
+           });
+        });
+    </script>
+</body>
+</html>
